@@ -1,6 +1,6 @@
 <?php
 
-namespace EnderPearlCoolDown;
+namespace Pizzahaet\EnderPearl;
 
 use pocketmine\event\Listener;
 use pocketmine\Player;
