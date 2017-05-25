@@ -1,2 +1,4 @@
-# EnderPearlCoolDown-reupload-
+# EnderPearlCoolDown
 The original Enderpearlcooldown for mcpe reuploaded
+This project was started by me but since the timer part of the code was given to me the creator of the timer asked me to take my repo down because he didn't understand what I was saying via Twitter DM's. When it was orginally uploaded it worked but that copy I had was lost with my old tablet that broke, only copy I has was in my GDrive, so for any possible beef with @AppleDevelops (His Twitter), his version of the plugin did work, as well as mine before he created his repo... Long story short stuff was said, DCMA was filed and ended in his repo being removed, his so called war ended with his L... So Apple if you're reading this well please kindly fuck off, you don't have to be a dick to learning developers such as me, teach them intead. We all have feelings too you know
+There is a high possibility that this doesn't work. Use at your own risk!
