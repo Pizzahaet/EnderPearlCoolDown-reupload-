@@ -1,5 +1,6 @@
 name: EnderPearlCoolDown
-main: pizzahaet\Main
-version: 1.0
-api: [3.0.0]
-author: Pizzahaet, ZorexPvP, Derpific
+main: Pizzahaet\EnderPearl\Main
+version: 0.5.2BETA
+api: 
+- 3.0.0-ALPHA
+author: Pizzahaet
