@@ -1,6 +1,6 @@
 name: EnderPearlCoolDown
-main: Pizzahaet\EnderPearl\Main
+main: pizzahaet\enderpearl\Main
 version: 0.5.2BETA
 api: 
-- 3.0.0-ALPHA
+- 3.0.0-ALPHA9
 author: Pizzahaet

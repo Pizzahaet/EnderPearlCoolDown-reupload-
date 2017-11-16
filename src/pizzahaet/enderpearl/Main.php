@@ -2,12 +2,12 @@
 
 namespace Pizzahaet\EnderPearl;
 
+use pocketmine\event\entity\ProjectileLaunchEvent;
 use pocketmine\event\Listener;
+use pocketmine\entity\EnderPearl;
 use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
-use pocketmine\entity\EnderPearl;
-use pocketmine\event\entity\ProjectileLaunchEvent;
-use pocketmine\utils\TextFormat as C;
+//use pocketmine\utils\TextFormat as C;
 
 class Main extends PluginBase implements Listener {
 
@@ -22,19 +22,19 @@ class Main extends PluginBase implements Listener {
         $this->coolDown = $this->getConfig()->get("E-PearlCoolDown");
     }
 
-    public function onThrow(ProjectileLaunchEvent $pce) {
-        if ($pce->isCancelled()) return;
+    public function onThrow(ProjectileLaunchEvent $event) {
+        if ($event->isCancelled()) return;
 
-        $shooter = $pce->getEntity()->shootingEntity;
+        $shooter = $event->getEntity();
         if ($shooter instanceof Player) {
-            if ($pce->getEntity() instanceof EnderPearl) {
+            if ($event->getEntity() instanceof EnderPearl){
                 $name = strtolower($shooter->getDisplayName());
                 if (!isset($this->timer[$name]) OR time() > $this->timer[$name]) {
                     $this->timer[$name] = $this->coolDown;
                 } else {
-                    $pce->setCancelled();
-                    $shooter->sendPopup(C::BOLD . C::RED . "Error" . C::DARK_GRAY . ">" . "On EnderPearl CoolDown: \nWait" . round($this->timer[$name] - time()) . C::RESET);
-                    //Timer made by Derpific aka DerpDev from his GappleCoolDown plugin Thanks for allowing us to use this
+                    $event->setCancelled();
+                    $shooter->sendPopup("please wait " . round($this->timer[$name] - time()) . " to use that again");
+                    //$shooter->sendTitle("Please wait...", "You have" . round($this->timer[$name] - time()) . "Until you can use that again", 5, 10, 15);
                 }
             }
         }
